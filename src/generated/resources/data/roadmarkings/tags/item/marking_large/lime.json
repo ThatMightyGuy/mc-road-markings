@@ -1,0 +1,14 @@
+{
+  "values": [
+    "roadmarkings:all_turns_lime",
+    "roadmarkings:left_lime",
+    "roadmarkings:left_right_lime",
+    "roadmarkings:pig_path_lime",
+    "roadmarkings:railroad_crossing_lime",
+    "roadmarkings:right_lime",
+    "roadmarkings:through_lime",
+    "roadmarkings:through_left_lime",
+    "roadmarkings:through_right_lime",
+    "roadmarkings:stop_lime"
+  ]
+}

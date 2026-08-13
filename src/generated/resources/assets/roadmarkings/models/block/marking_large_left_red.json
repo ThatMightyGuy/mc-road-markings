@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large",
+  "textures": {
+    "all": "roadmarkings:block/left_red",
+    "particle": "roadmarkings:block/left_red"
+  }
+}

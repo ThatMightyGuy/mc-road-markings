@@ -1,0 +1,14 @@
+{
+  "values": [
+    "roadmarkings:all_turns_pink",
+    "roadmarkings:left_pink",
+    "roadmarkings:left_right_pink",
+    "roadmarkings:pig_path_pink",
+    "roadmarkings:railroad_crossing_pink",
+    "roadmarkings:right_pink",
+    "roadmarkings:through_pink",
+    "roadmarkings:through_left_pink",
+    "roadmarkings:through_right_pink",
+    "roadmarkings:stop_pink"
+  ]
+}

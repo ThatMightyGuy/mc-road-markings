@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/stone",
+  "textures": {
+    "all": "roadmarkings:block/asphalt_magenta"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/shoulder_inner_orange",
+    "particle": "roadmarkings:block/shoulder_inner_orange"
+  }
+}

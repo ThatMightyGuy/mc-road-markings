@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/black"
+  },
+  "result": {
+    "count": 16,
+    "id": "roadmarkings:double_t_black"
+  }
+}

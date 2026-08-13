@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/railroad_crossing_black",
+    "particle": "roadmarkings:block/railroad_crossing_black"
+  }
+}

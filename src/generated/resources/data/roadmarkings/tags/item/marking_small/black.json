@@ -1,0 +1,27 @@
+{
+  "values": [
+    "roadmarkings:bands_half_black",
+    "roadmarkings:bands_quarter_black",
+    "roadmarkings:bands_eighth_black",
+    "roadmarkings:double_corner_black",
+    "roadmarkings:double_cross_black",
+    "roadmarkings:double_straight_black",
+    "roadmarkings:double_t_black",
+    "roadmarkings:shoulder_double_inner_black",
+    "roadmarkings:shoulder_double_outer_black",
+    "roadmarkings:shoulder_double_straight_black",
+    "roadmarkings:shoulder_inner_black",
+    "roadmarkings:shoulder_outer_black",
+    "roadmarkings:shoulder_straight_black",
+    "roadmarkings:shoulder_t_left_black",
+    "roadmarkings:shoulder_t_right_black",
+    "roadmarkings:solid_corner_black",
+    "roadmarkings:solid_cross_black",
+    "roadmarkings:solid_cross_shoulder_black",
+    "roadmarkings:solid_straight_black",
+    "roadmarkings:solid_t_black",
+    "roadmarkings:solid_t_shoulder_black",
+    "roadmarkings:solid_t_shoulder_left_black",
+    "roadmarkings:solid_t_shoulder_right_black"
+  ]
+}

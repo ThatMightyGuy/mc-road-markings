@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/pig_path_red",
+    "particle": "roadmarkings:block/pig_path_red"
+  }
+}

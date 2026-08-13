@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large",
+  "textures": {
+    "all": "roadmarkings:block/railroad_crossing_green",
+    "particle": "roadmarkings:block/railroad_crossing_green"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "roadmarkings:block/marking_small_solid_t_shoulder_right_brown",
+  "display": {
+    "firstperson_lefthand": {
+      "translation": [
+        0,
+        7,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        0,
+        7,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "translation": [
+        0,
+        5.5,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "values": [
+    "roadmarkings:bands_half_lime",
+    "roadmarkings:bands_quarter_lime",
+    "roadmarkings:bands_eighth_lime",
+    "roadmarkings:double_corner_lime",
+    "roadmarkings:double_cross_lime",
+    "roadmarkings:double_straight_lime",
+    "roadmarkings:double_t_lime",
+    "roadmarkings:shoulder_double_inner_lime",
+    "roadmarkings:shoulder_double_outer_lime",
+    "roadmarkings:shoulder_double_straight_lime",
+    "roadmarkings:shoulder_inner_lime",
+    "roadmarkings:shoulder_outer_lime",
+    "roadmarkings:shoulder_straight_lime",
+    "roadmarkings:shoulder_t_left_lime",
+    "roadmarkings:shoulder_t_right_lime",
+    "roadmarkings:solid_corner_lime",
+    "roadmarkings:solid_cross_lime",
+    "roadmarkings:solid_cross_shoulder_lime",
+    "roadmarkings:solid_straight_lime",
+    "roadmarkings:solid_t_lime",
+    "roadmarkings:solid_t_shoulder_lime",
+    "roadmarkings:solid_t_shoulder_left_lime",
+    "roadmarkings:solid_t_shoulder_right_lime"
+  ]
+}

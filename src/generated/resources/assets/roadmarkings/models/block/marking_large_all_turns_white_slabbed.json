@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/all_turns_white",
+    "particle": "roadmarkings:block/all_turns_white"
+  }
+}

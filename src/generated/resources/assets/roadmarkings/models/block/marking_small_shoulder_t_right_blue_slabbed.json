@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/shoulder_t_right_blue",
+    "particle": "roadmarkings:block/shoulder_t_right_blue"
+  }
+}

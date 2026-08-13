@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/light_blue"
+  },
+  "result": {
+    "count": 16,
+    "id": "roadmarkings:solid_cross_shoulder_light_blue"
+  }
+}
