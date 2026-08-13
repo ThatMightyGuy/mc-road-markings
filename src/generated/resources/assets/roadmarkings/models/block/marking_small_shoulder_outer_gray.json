@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/shoulder_outer_gray",
+    "particle": "roadmarkings:block/shoulder_outer_gray"
+  }
+}

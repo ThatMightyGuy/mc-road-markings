@@ -1,0 +1,14 @@
+{
+  "values": [
+    "roadmarkings:all_turns_yellow",
+    "roadmarkings:left_yellow",
+    "roadmarkings:left_right_yellow",
+    "roadmarkings:pig_path_yellow",
+    "roadmarkings:railroad_crossing_yellow",
+    "roadmarkings:right_yellow",
+    "roadmarkings:through_yellow",
+    "roadmarkings:through_left_yellow",
+    "roadmarkings:through_right_yellow",
+    "roadmarkings:stop_yellow"
+  ]
+}

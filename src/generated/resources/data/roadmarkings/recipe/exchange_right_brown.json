@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:marking_large/brown"
+  },
+  "result": {
+    "count": 1,
+    "id": "roadmarkings:right_brown"
+  }
+}

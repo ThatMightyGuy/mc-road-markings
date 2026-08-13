@@ -1,0 +1,18 @@
+{
+    "parent": "block/block",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "all": "minecraft:missing",
+        "particle": "minecraft:missing"
+    },
+    "elements": [
+      {
+        "from": [-16,  -8, -16],
+        "to":   [32, -7.8,  32],
+        "faces": {
+            "down": {"uv": [0,  0, 16, 16], "texture": "#all"},
+            "up":   {"uv": [0,  0, 16, 16], "texture": "#all"}
+        }
+      }
+    ]
+  }

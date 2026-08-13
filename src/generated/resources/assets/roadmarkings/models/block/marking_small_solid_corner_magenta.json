@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/solid_corner_magenta",
+    "particle": "roadmarkings:block/solid_corner_magenta"
+  }
+}

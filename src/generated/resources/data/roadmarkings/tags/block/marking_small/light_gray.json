@@ -1,0 +1,27 @@
+{
+  "values": [
+    "roadmarkings:bands_half_light_gray",
+    "roadmarkings:bands_quarter_light_gray",
+    "roadmarkings:bands_eighth_light_gray",
+    "roadmarkings:double_corner_light_gray",
+    "roadmarkings:double_cross_light_gray",
+    "roadmarkings:double_straight_light_gray",
+    "roadmarkings:double_t_light_gray",
+    "roadmarkings:shoulder_double_inner_light_gray",
+    "roadmarkings:shoulder_double_outer_light_gray",
+    "roadmarkings:shoulder_double_straight_light_gray",
+    "roadmarkings:shoulder_inner_light_gray",
+    "roadmarkings:shoulder_outer_light_gray",
+    "roadmarkings:shoulder_straight_light_gray",
+    "roadmarkings:shoulder_t_left_light_gray",
+    "roadmarkings:shoulder_t_right_light_gray",
+    "roadmarkings:solid_corner_light_gray",
+    "roadmarkings:solid_cross_light_gray",
+    "roadmarkings:solid_cross_shoulder_light_gray",
+    "roadmarkings:solid_straight_light_gray",
+    "roadmarkings:solid_t_light_gray",
+    "roadmarkings:solid_t_shoulder_light_gray",
+    "roadmarkings:solid_t_shoulder_left_light_gray",
+    "roadmarkings:solid_t_shoulder_right_light_gray"
+  ]
+}

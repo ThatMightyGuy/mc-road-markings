@@ -1,4 +1,18 @@
 
+# Road Markings for Minecraft 1.21.1 NeoForge
+
+This is the source code for the mod. You're not getting an ~~.exe~~ .jar here, go to the releases page on the right!
+
+This mod adds a bunch of road marking decals in 1x1 and 3x3 sizes.
+
+They're crafted on the stonecutter out of painted asphalt, to craft which, you'll need 8 dry concrete and a dye in the middle.
+
+After crafting a decal, you can exchange it for other decal shapes of the same size and color for free using a stonecutter.
+
+Some stuff is pretty janky. I wouldn't rely on this mod to work, but it's so basic that it might just work for everyone.
+
+Below is the NeoForge MDK stuff for developers.
+
 Installation information
 =======
 

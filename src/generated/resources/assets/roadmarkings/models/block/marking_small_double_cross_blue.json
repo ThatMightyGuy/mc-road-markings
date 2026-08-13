@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/double_cross_blue",
+    "particle": "roadmarkings:block/double_cross_blue"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_painted_asphalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#roadmarkings:asphalt/orange"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "roadmarkings:shoulder_t_left_orange"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_painted_asphalt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "roadmarkings:shoulder_t_left_orange"
+    ]
+  }
+}

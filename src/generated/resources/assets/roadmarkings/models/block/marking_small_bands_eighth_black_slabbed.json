@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/bands_eighth_black",
+    "particle": "roadmarkings:block/bands_eighth_black"
+  }
+}

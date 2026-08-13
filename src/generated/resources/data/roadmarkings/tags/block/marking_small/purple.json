@@ -1,0 +1,27 @@
+{
+  "values": [
+    "roadmarkings:bands_half_purple",
+    "roadmarkings:bands_quarter_purple",
+    "roadmarkings:bands_eighth_purple",
+    "roadmarkings:double_corner_purple",
+    "roadmarkings:double_cross_purple",
+    "roadmarkings:double_straight_purple",
+    "roadmarkings:double_t_purple",
+    "roadmarkings:shoulder_double_inner_purple",
+    "roadmarkings:shoulder_double_outer_purple",
+    "roadmarkings:shoulder_double_straight_purple",
+    "roadmarkings:shoulder_inner_purple",
+    "roadmarkings:shoulder_outer_purple",
+    "roadmarkings:shoulder_straight_purple",
+    "roadmarkings:shoulder_t_left_purple",
+    "roadmarkings:shoulder_t_right_purple",
+    "roadmarkings:solid_corner_purple",
+    "roadmarkings:solid_cross_purple",
+    "roadmarkings:solid_cross_shoulder_purple",
+    "roadmarkings:solid_straight_purple",
+    "roadmarkings:solid_t_purple",
+    "roadmarkings:solid_t_shoulder_purple",
+    "roadmarkings:solid_t_shoulder_left_purple",
+    "roadmarkings:solid_t_shoulder_right_purple"
+  ]
+}

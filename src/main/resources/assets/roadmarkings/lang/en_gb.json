@@ -1,0 +1,13 @@
+{
+  "itemGroup.roadmarkings": "Example Mod Tab",
+  "block.roadmarkings.example_block": "Example Block",
+  "item.roadmarkings.example_item": "Example Item",
+
+  "roadmarkings.configuration.title": "Example Mod Configs",
+  "roadmarkings.configuration.section.roadmarkings.common.toml": "Example Mod Configs",
+  "roadmarkings.configuration.section.roadmarkings.common.toml.title": "Example Mod Configs",
+  "roadmarkings.configuration.items": "Item List",
+  "roadmarkings.configuration.logDirtBlock": "Log Dirt Block",
+  "roadmarkings.configuration.magicNumberIntroduction": "Magic Number Text",
+  "roadmarkings.configuration.magicNumber": "Magic Number"
+}
