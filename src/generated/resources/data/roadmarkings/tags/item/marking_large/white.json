@@ -9,6 +9,20 @@
     "roadmarkings:through_white",
     "roadmarkings:through_left_white",
     "roadmarkings:through_right_white",
-    "roadmarkings:stop_white"
+    "roadmarkings:stop_white",
+    "roadmarkings:ru_stop_white",
+    "roadmarkings:bus_white",
+    "roadmarkings:crossing_ahead_white",
+    "roadmarkings:kana_ni_white",
+    "roadmarkings:kanji_kei_white",
+    "roadmarkings:kanji_ryo_white",
+    "roadmarkings:kanji_sha_white",
+    "roadmarkings:kanji_wa_white",
+    "roadmarkings:lane_white",
+    "roadmarkings:priority_ahead_white",
+    "roadmarkings:diagonal_white",
+    "roadmarkings:diagonal_thin_white",
+    "roadmarkings:roundabout_lhd_white",
+    "roadmarkings:roundabout_rhd_white"
   ]
 }

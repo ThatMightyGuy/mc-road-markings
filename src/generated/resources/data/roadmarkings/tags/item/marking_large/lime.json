@@ -9,6 +9,20 @@
     "roadmarkings:through_lime",
     "roadmarkings:through_left_lime",
     "roadmarkings:through_right_lime",
-    "roadmarkings:stop_lime"
+    "roadmarkings:stop_lime",
+    "roadmarkings:ru_stop_lime",
+    "roadmarkings:bus_lime",
+    "roadmarkings:crossing_ahead_lime",
+    "roadmarkings:kana_ni_lime",
+    "roadmarkings:kanji_kei_lime",
+    "roadmarkings:kanji_ryo_lime",
+    "roadmarkings:kanji_sha_lime",
+    "roadmarkings:kanji_wa_lime",
+    "roadmarkings:lane_lime",
+    "roadmarkings:priority_ahead_lime",
+    "roadmarkings:diagonal_lime",
+    "roadmarkings:diagonal_thin_lime",
+    "roadmarkings:roundabout_lhd_lime",
+    "roadmarkings:roundabout_rhd_lime"
   ]
 }

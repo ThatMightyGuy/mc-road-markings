@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_painted_asphalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#roadmarkings:asphalt/magenta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "roadmarkings:crossing_ahead_magenta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_painted_asphalt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "roadmarkings:crossing_ahead_magenta"
+    ]
+  }
+}

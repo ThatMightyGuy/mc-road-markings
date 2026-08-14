@@ -73,7 +73,21 @@ public class RoadMarkings {
         "through",
         "through_left",
         "through_right",
-        "stop"
+        "stop",
+        "ru_stop",
+        "bus",
+        "crossing_ahead",
+        "kana_ni",
+        "kanji_kei",
+        "kanji_ryo",
+        "kanji_sha",
+        "kanji_wa",
+        "lane",
+        "priority_ahead",
+        "diagonal",
+        "diagonal_thin",
+        "roundabout_lhd",
+        "roundabout_rhd"
     };
 
     public static final String[] PATTERNS_SMALL = {
@@ -99,7 +113,22 @@ public class RoadMarkings {
         "solid_t",
         "solid_t_shoulder",
         "solid_t_shoulder_left",
-        "solid_t_shoulder_right"
+        "solid_t_shoulder_right",
+        "hatch_diagonal_regular",
+        "hatch_diagonal_tight",
+        "hatch_diamond_regular",
+        "hatch_diamond_tight",
+        "dot",
+        "jp_no_parking_straight",
+        "ped_direction",
+        "stop_line",
+        "flush_line",
+        "flush_line_thin",
+        "line_crossing_ahead_zig",
+        "line_crossing_ahead_zag",
+        "zigzag_end_full",
+        "zigzag_end_left",
+        "zigzag_end_right",
     };
 
     private static Map<DyeColor, TagKey<Block>> generateColorTags(String baseTag) {
@@ -134,7 +163,7 @@ public class RoadMarkings {
     public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_PAINT = generateItemTags(TAGS_MARKING_PAINT);
 
     private static final BlockBehaviour.Properties PROPERTIES_MARKINGS = BlockBehaviour.Properties.of()
-        .strength(0.3F)
+        .strength(0.5f, 6.0f)
         .sound(SoundType.STONE)
         .noOcclusion()
         .noCollission()
@@ -144,7 +173,8 @@ public class RoadMarkings {
         .isValidSpawn((state, level, pos, type) -> true);
 
     private static final BlockBehaviour.Properties PROPERTIES_ASPHALT = BlockBehaviour.Properties.of()
-        .strength(6.0F)
+        .strength(1.0f, 6.0F)
+        .requiresCorrectToolForDrops()
         .sound(SoundType.STONE)
         .isViewBlocking((state, level, pos) -> true)
         .isSuffocating((state, level, pos) -> true)

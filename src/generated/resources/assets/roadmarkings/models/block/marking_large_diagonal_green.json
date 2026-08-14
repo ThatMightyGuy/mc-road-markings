@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large",
+  "textures": {
+    "all": "roadmarkings:block/diagonal_green",
+    "particle": "roadmarkings:block/diagonal_green"
+  }
+}

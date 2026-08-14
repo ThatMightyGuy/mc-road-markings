@@ -22,6 +22,21 @@
     "roadmarkings:solid_t_purple",
     "roadmarkings:solid_t_shoulder_purple",
     "roadmarkings:solid_t_shoulder_left_purple",
-    "roadmarkings:solid_t_shoulder_right_purple"
+    "roadmarkings:solid_t_shoulder_right_purple",
+    "roadmarkings:hatch_diagonal_regular_purple",
+    "roadmarkings:hatch_diagonal_tight_purple",
+    "roadmarkings:hatch_diamond_regular_purple",
+    "roadmarkings:hatch_diamond_tight_purple",
+    "roadmarkings:dot_purple",
+    "roadmarkings:jp_no_parking_straight_purple",
+    "roadmarkings:ped_direction_purple",
+    "roadmarkings:stop_line_purple",
+    "roadmarkings:flush_line_purple",
+    "roadmarkings:flush_line_thin_purple",
+    "roadmarkings:line_crossing_ahead_zig_purple",
+    "roadmarkings:line_crossing_ahead_zag_purple",
+    "roadmarkings:zigzag_end_full_purple",
+    "roadmarkings:zigzag_end_left_purple",
+    "roadmarkings:zigzag_end_right_purple"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/blue"
+  },
+  "result": {
+    "count": 8,
+    "id": "roadmarkings:kanji_ryo_blue"
+  }
+}

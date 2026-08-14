@@ -9,6 +9,20 @@
     "roadmarkings:through_pink",
     "roadmarkings:through_left_pink",
     "roadmarkings:through_right_pink",
-    "roadmarkings:stop_pink"
+    "roadmarkings:stop_pink",
+    "roadmarkings:ru_stop_pink",
+    "roadmarkings:bus_pink",
+    "roadmarkings:crossing_ahead_pink",
+    "roadmarkings:kana_ni_pink",
+    "roadmarkings:kanji_kei_pink",
+    "roadmarkings:kanji_ryo_pink",
+    "roadmarkings:kanji_sha_pink",
+    "roadmarkings:kanji_wa_pink",
+    "roadmarkings:lane_pink",
+    "roadmarkings:priority_ahead_pink",
+    "roadmarkings:diagonal_pink",
+    "roadmarkings:diagonal_thin_pink",
+    "roadmarkings:roundabout_lhd_pink",
+    "roadmarkings:roundabout_rhd_pink"
   ]
 }

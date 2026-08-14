@@ -23,9 +23,7 @@ public class BaseMarkingBlock extends HorizontalDirectionalBlock {
     public static final BooleanProperty SLABBED = CommonProperties.SLABBED;
 
     public BaseMarkingBlock(Properties properties) {
-        super(properties
-            .strength(1.5f, 6.0f)
-        );
+        super(properties);
 
         registerDefaultState(stateDefinition.any()
             .setValue(FACING, Direction.NORTH)

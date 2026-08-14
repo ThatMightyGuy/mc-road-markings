@@ -9,6 +9,20 @@
     "roadmarkings:through_orange",
     "roadmarkings:through_left_orange",
     "roadmarkings:through_right_orange",
-    "roadmarkings:stop_orange"
+    "roadmarkings:stop_orange",
+    "roadmarkings:ru_stop_orange",
+    "roadmarkings:bus_orange",
+    "roadmarkings:crossing_ahead_orange",
+    "roadmarkings:kana_ni_orange",
+    "roadmarkings:kanji_kei_orange",
+    "roadmarkings:kanji_ryo_orange",
+    "roadmarkings:kanji_sha_orange",
+    "roadmarkings:kanji_wa_orange",
+    "roadmarkings:lane_orange",
+    "roadmarkings:priority_ahead_orange",
+    "roadmarkings:diagonal_orange",
+    "roadmarkings:diagonal_thin_orange",
+    "roadmarkings:roundabout_lhd_orange",
+    "roadmarkings:roundabout_rhd_orange"
   ]
 }

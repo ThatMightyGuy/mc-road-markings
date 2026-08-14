@@ -9,6 +9,20 @@
     "roadmarkings:through_gray",
     "roadmarkings:through_left_gray",
     "roadmarkings:through_right_gray",
-    "roadmarkings:stop_gray"
+    "roadmarkings:stop_gray",
+    "roadmarkings:ru_stop_gray",
+    "roadmarkings:bus_gray",
+    "roadmarkings:crossing_ahead_gray",
+    "roadmarkings:kana_ni_gray",
+    "roadmarkings:kanji_kei_gray",
+    "roadmarkings:kanji_ryo_gray",
+    "roadmarkings:kanji_sha_gray",
+    "roadmarkings:kanji_wa_gray",
+    "roadmarkings:lane_gray",
+    "roadmarkings:priority_ahead_gray",
+    "roadmarkings:diagonal_gray",
+    "roadmarkings:diagonal_thin_gray",
+    "roadmarkings:roundabout_lhd_gray",
+    "roadmarkings:roundabout_rhd_gray"
   ]
 }

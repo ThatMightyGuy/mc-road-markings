@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/ped_direction_gray",
+    "particle": "roadmarkings:block/ped_direction_gray"
+  }
+}

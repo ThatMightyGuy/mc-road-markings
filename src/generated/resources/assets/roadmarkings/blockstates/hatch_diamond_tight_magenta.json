@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,slabbed=false": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta",
+      "y": 90
+    },
+    "facing=east,slabbed=true": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta_slabbed",
+      "y": 90
+    },
+    "facing=north,slabbed=false": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta"
+    },
+    "facing=north,slabbed=true": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta_slabbed"
+    },
+    "facing=south,slabbed=false": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta",
+      "y": 180
+    },
+    "facing=south,slabbed=true": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta_slabbed",
+      "y": 180
+    },
+    "facing=west,slabbed=false": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta",
+      "y": 270
+    },
+    "facing=west,slabbed=true": {
+      "model": "roadmarkings:block/marking_small_hatch_diamond_tight_magenta_slabbed",
+      "y": 270
+    }
+  }
+}

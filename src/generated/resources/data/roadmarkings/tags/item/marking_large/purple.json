@@ -9,6 +9,20 @@
     "roadmarkings:through_purple",
     "roadmarkings:through_left_purple",
     "roadmarkings:through_right_purple",
-    "roadmarkings:stop_purple"
+    "roadmarkings:stop_purple",
+    "roadmarkings:ru_stop_purple",
+    "roadmarkings:bus_purple",
+    "roadmarkings:crossing_ahead_purple",
+    "roadmarkings:kana_ni_purple",
+    "roadmarkings:kanji_kei_purple",
+    "roadmarkings:kanji_ryo_purple",
+    "roadmarkings:kanji_sha_purple",
+    "roadmarkings:kanji_wa_purple",
+    "roadmarkings:lane_purple",
+    "roadmarkings:priority_ahead_purple",
+    "roadmarkings:diagonal_purple",
+    "roadmarkings:diagonal_thin_purple",
+    "roadmarkings:roundabout_lhd_purple",
+    "roadmarkings:roundabout_rhd_purple"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/diagonal_thin_yellow",
+    "particle": "roadmarkings:block/diagonal_thin_yellow"
+  }
+}

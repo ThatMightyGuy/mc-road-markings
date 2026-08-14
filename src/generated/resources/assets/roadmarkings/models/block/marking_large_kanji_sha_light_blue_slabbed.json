@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/kanji_sha_light_blue",
+    "particle": "roadmarkings:block/kanji_sha_light_blue"
+  }
+}

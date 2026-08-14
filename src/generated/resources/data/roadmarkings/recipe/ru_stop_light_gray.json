@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/light_gray"
+  },
+  "result": {
+    "count": 8,
+    "id": "roadmarkings:ru_stop_light_gray"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/jp_no_parking_straight_green",
+    "particle": "roadmarkings:block/jp_no_parking_straight_green"
+  }
+}
