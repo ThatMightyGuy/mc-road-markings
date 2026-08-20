@@ -31,7 +31,7 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
 
         for (DyeColor color : DyeColor.values()) {
             Item asphalt = RoadMarkings.MOD_BLOCKS.paint.get("asphalt" + "_" + color).asItem();
-            TagKey<Item> asphaltTag = RoadMarkings.ITEM_TAGS_MARKING_PAINT.get(color);
+            TagKey<Item> asphaltTag = MarkingItemTagsProvider.ITEM_TAGS_MARKING_PAINT.get(color);
             TagKey<Item> itemTag = itemTags.get(color);
 
             for(String target : patterns)
@@ -85,9 +85,9 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
             );
         }
 
-        buildMarkingRecipes(consumer, 16, RoadMarkings.PATTERNS_SMALL, RoadMarkings.MOD_BLOCKS.small, RoadMarkings.ITEM_TAGS_MARKING_SMALL);
+        buildMarkingRecipes(consumer, 16, RoadMarkings.PATTERNS_SMALL, RoadMarkings.MOD_BLOCKS.small, MarkingItemTagsProvider.ITEM_TAGS_MARKING_SMALL);
 
-        buildMarkingRecipes(consumer, 8, RoadMarkings.PATTERNS_LARGE, RoadMarkings.MOD_BLOCKS.large, RoadMarkings.ITEM_TAGS_MARKING_LARGE);
+        buildMarkingRecipes(consumer, 8, RoadMarkings.PATTERNS_LARGE, RoadMarkings.MOD_BLOCKS.large, MarkingItemTagsProvider.ITEM_TAGS_MARKING_LARGE);
     }
 
 

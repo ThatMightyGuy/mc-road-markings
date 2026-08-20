@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/sign_post_nibble",
+  "textures": {
+    "all": "roadmarkings:block/asphalt_light_gray",
+    "particle": "roadmarkings:block/asphalt_light_gray"
+  }
+}

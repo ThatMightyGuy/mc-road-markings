@@ -31,7 +31,7 @@ public class RussianLocalizer {
 
         h.put("double_straight", new Triplet<>(Gender.FEMALE, Count.ONE, "двойная сплошная"));
         h.put("double_corner", new Triplet<>(Gender.MALE, Count.ONE, "угол двойной сплошной"));
-        h.put("double_cross", new Triplet<>(Gender.MALE, Count.ONE, "пересечение двойной сплошной"));
+        h.put("double_cross", new Triplet<>(Gender.NONE, Count.ONE, "пересечение двойной сплошной"));
         h.put("double_t", new Triplet<>(Gender.NONE, Count.ONE, "Т-образное пересечение двойной сплошной"));
 
         h.put("left", new Triplet<>(Gender.FEMALE, Count.ONE, "стрелка налево"));
@@ -40,6 +40,27 @@ public class RussianLocalizer {
         h.put("pig_path", new Triplet<>(Gender.FEMALE, Count.ONE, "свинодорожка"));
 
         h.put("stop", new Triplet<>(Gender.MALE, Count.ONE, "указатель остановки"));
+        h.put("ru_stop", new Triplet<>(Gender.MALE, Count.ONE, "указатель остановки (Россия)"));
+
+        h.put("bus", new Triplet<>(Gender.MALE, Count.ONE, "указатель автобусной полосы"));
+
+        h.put("crossing_ahead", new Triplet<>(Gender.MALE, Count.ONE, "указатель пешеходного перехода впереди (Япония)"));
+
+        h.put("kana_ni", new Triplet<>(Gender.FEMALE, Count.ONE, "катакана ни"));
+        h.put("kanji_kei", new Triplet<>(Gender.NONE, Count.ONE, "кандзи кей"));
+        h.put("kanji_ryo", new Triplet<>(Gender.NONE, Count.ONE, "кандзи рё"));
+        h.put("kanji_sha", new Triplet<>(Gender.NONE, Count.ONE, "кандзи ша"));
+        h.put("kanji_wa", new Triplet<>(Gender.NONE, Count.ONE, "кандзи ва"));
+
+        h.put("lane", new Triplet<>(Gender.MALE, Count.ONE, "указатель полосы"));
+
+        h.put("priority_ahead", new Triplet<>(Gender.MALE, Count.ONE, "указатель главной дороги впереди (Япония, Россия)"));
+
+        h.put("diagonal", new Triplet<>(Gender.FEMALE, Count.ONE, "диагональ"));
+        h.put("diagonal_thin", new Triplet<>(Gender.FEMALE, Count.ONE, "тонкая диагональ"));
+
+        h.put("roundabout_lhd", new Triplet<>(Gender.MALE, Count.ONE, "указатель левосторонней кольцевой дороги"));
+        h.put("roundabout_rhd", new Triplet<>(Gender.MALE, Count.ONE, "указатель правосторонней кольцевой дороги"));
 
         h.put("railroad_crossing", new Triplet<>(Gender.MALE, Count.ONE, "Ж/Д переезд"));
 
@@ -47,18 +68,18 @@ public class RussianLocalizer {
 
         h.put("shoulder_double_inner", new Triplet<>(Gender.MALE, Count.ONE, "внутренний угол двойной обочины"));
         h.put("shoulder_double_outer", new Triplet<>(Gender.MALE, Count.ONE, "внешний угол двойной обочины"));
-        h.put("shoulder_double_straight", new Triplet<>(Gender.MALE, Count.ONE, "внешний угол двойной обочины"));
+        h.put("shoulder_double_straight", new Triplet<>(Gender.FEMALE, Count.ONE, "двойная обочина"));
 
         h.put("shoulder_inner", new Triplet<>(Gender.MALE, Count.ONE, "внутренний угол обочины"));
         h.put("shoulder_outer", new Triplet<>(Gender.MALE, Count.ONE, "внешний угол обочины"));
-        h.put("shoulder_straight", new Triplet<>(Gender.MALE, Count.ONE, "прямая обочина"));
+        h.put("shoulder_straight", new Triplet<>(Gender.FEMALE, Count.ONE, "прямая обочина"));
         h.put("shoulder_t_left", new Triplet<>(Gender.NONE, Count.ONE, "левое Т-образное пересечение обочины"));
         h.put("shoulder_t_right", new Triplet<>(Gender.NONE, Count.ONE, "правое Т-образное пересечение обочины"));
 
         h.put("solid_straight", new Triplet<>(Gender.FEMALE, Count.ONE, "сплошная"));
         h.put("solid_corner", new Triplet<>(Gender.MALE, Count.ONE, "угол сплошной"));
-        h.put("solid_cross", new Triplet<>(Gender.MALE, Count.ONE, "пересечение сплошной"));
-        h.put("solid_cross_shoulder", new Triplet<>(Gender.MALE, Count.ONE, "пересечение сплошной и обочины"));
+        h.put("solid_cross", new Triplet<>(Gender.NONE, Count.ONE, "пересечение сплошной"));
+        h.put("solid_cross_shoulder", new Triplet<>(Gender.NONE, Count.ONE, "пересечение сплошной и обочины"));
         h.put("solid_t", new Triplet<>(Gender.NONE, Count.ONE, "Т-образное пересечение сплошной"));
         h.put("solid_t_shoulder", new Triplet<>(Gender.NONE, Count.ONE, "Т-образное пересечение сплошной и обочины"));
         h.put("solid_t_shoulder_left", new Triplet<>(Gender.NONE, Count.ONE, "левое Т-образное пересечение сплошной и обочины"));
@@ -67,6 +88,27 @@ public class RussianLocalizer {
         h.put("through", new Triplet<>(Gender.FEMALE, Count.ONE, "стрелка прямо"));
         h.put("through_left", new Triplet<>(Gender.FEMALE, Count.ONE, "стрелка прямо и налево"));
         h.put("through_right", new Triplet<>(Gender.FEMALE, Count.ONE, "стрелка прямо и направо"));
+
+        h.put("hatch_diagonal_regular", new Triplet<>(Gender.NONE, Count.ONE, "обычное диагональное заполнение"));
+        h.put("hatch_diagonal_tight", new Triplet<>(Gender.NONE, Count.ONE, "плотное диагональное заполнение"));
+        h.put("hatch_diamond_regular", new Triplet<>(Gender.NONE, Count.ONE, "обычное сеточное заполнение"));
+        h.put("hatch_diamond_tight", new Triplet<>(Gender.NONE, Count.ONE, "плотное сеточное заполнение"));
+
+        h.put("dot", new Triplet<>(Gender.MALE, Count.ONE, "интерпункт"));
+
+        h.put("jp_no_parking_straight", new Triplet<>(Gender.FEMALE, Count.ONE, "прямая разметка зоны без парковки (Япония)"));
+
+        h.put("ped_direction", new Triplet<>(Gender.FEMALE, Count.ONE, "стрелка направления пешеходного движения"));
+
+        h.put("stop_line", new Triplet<>(Gender.FEMALE, Count.ONE, "линия остановки"));
+        h.put("flush_line", new Triplet<>(Gender.FEMALE, Count.ONE, "линия заподлицо"));
+        h.put("flush_line_thin", new Triplet<>(Gender.FEMALE, Count.ONE, "тонкая линия заподлицо"));
+
+        h.put("line_crossing_ahead_zag", new Triplet<>(Gender.MALE, Count.ONE, "левый зигзаг (Великобритания)"));
+        h.put("line_crossing_ahead_zig", new Triplet<>(Gender.MALE, Count.ONE, "правый зигзаг (Великобритания)"));
+        h.put("zigzag_end_full", new Triplet<>(Gender.MALE, Count.ONE, "полный конец зигзага (Великобритания)"));
+        h.put("zigzag_end_left", new Triplet<>(Gender.MALE, Count.ONE, "левый конец зигзага (Великобритания)"));
+        h.put("zigzag_end_right", new Triplet<>(Gender.MALE, Count.ONE, "правый конец зигзага (Великобритания)"));
 
         return h;
     }
@@ -151,6 +193,7 @@ public class RussianLocalizer {
 
     private static final String findColor(Triplet<Gender, Count, String> hint) {
         for (Map.Entry<Triplet<Gender, Count, String>, String> entry : colorHints.entrySet()) {
+            // Triplets equality is kinda weird. I think it should work?
             Triplet<Gender, Count, String> key = entry.getKey();
             if (key.getA() == hint.getA() &&
                 key.getB() == hint.getB() &&

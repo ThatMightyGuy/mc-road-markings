@@ -2,7 +2,6 @@ package com.jetfly.roadmarkings;
 
 import org.slf4j.Logger;
 
-import com.ibm.icu.util.CodePointTrie.Small;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.HolderLookup;
@@ -10,13 +9,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.models.model.ModelLocationUtils;
-import net.minecraft.data.models.model.ModelTemplate;
-import net.minecraft.data.models.model.TextureMapping;
-import net.minecraft.data.models.model.TextureSlot;
-import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
+import net.minecraft.references.Items;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,31 +20,31 @@ import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.TagKey;
 
 import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+
+import javax.annotation.Nonnull;
+
 import java.util.Map;
 import net.minecraft.world.level.block.SoundType;
 
@@ -63,7 +57,10 @@ public class RoadMarkings {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final String[] PATTERNS_LARGE = {
+    public static final ItemAbility WRENCH_ROTATE = ItemAbility.get("c:wrench_rotate");
+    public static final ItemAbility WRENCH_DISASSEMBLE = ItemAbility.get("c:wrench_disassemble");
+
+    public static final @Nonnull String[] PATTERNS_LARGE = {
         "all_turns",
         "left",
         "left_right",
@@ -90,7 +87,7 @@ public class RoadMarkings {
         "roundabout_rhd"
     };
 
-    public static final String[] PATTERNS_SMALL = {
+    public static final @Nonnull String[] PATTERNS_SMALL = {
         "bands_half",
         "bands_quarter",
         "bands_eighth",
@@ -131,37 +128,6 @@ public class RoadMarkings {
         "zigzag_end_right",
     };
 
-    private static Map<DyeColor, TagKey<Block>> generateColorTags(String baseTag) {
-        Map<DyeColor, TagKey<Block>> tags = new EnumMap<>(DyeColor.class);
-
-        for(DyeColor color : DyeColor.values()) {
-            TagKey<Block> tag = TagKey.create(
-                Registries.BLOCK,
-                ResourceLocation.fromNamespaceAndPath(MODID, baseTag + "/" + color.getSerializedName())
-            );
-
-            tags.put(color, tag);
-        }
-
-        return tags;
-    }
-
-    private static Map<DyeColor, TagKey<Item>> generateItemTags(Map<DyeColor, TagKey<Block>> tags) {
-        Map<DyeColor, TagKey<Item>> result = new EnumMap<>(DyeColor.class);
-        for(Map.Entry<DyeColor, TagKey<Block>> tag : tags.entrySet()) {
-            result.put(tag.getKey(), TagKey.create(Registries.ITEM, tag.getValue().location()));
-        }
-        return result;
-    }
-
-    public static final Map<DyeColor, TagKey<Block>> TAGS_MARKING_LARGE = generateColorTags("marking_large");
-    public static final Map<DyeColor, TagKey<Block>> TAGS_MARKING_SMALL = generateColorTags("marking_small");
-    public static final Map<DyeColor, TagKey<Block>> TAGS_MARKING_PAINT = generateColorTags("asphalt");
-
-    public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_LARGE = generateItemTags(TAGS_MARKING_LARGE);
-    public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_SMALL = generateItemTags(TAGS_MARKING_SMALL);
-    public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_PAINT = generateItemTags(TAGS_MARKING_PAINT);
-
     private static final BlockBehaviour.Properties PROPERTIES_MARKINGS = BlockBehaviour.Properties.of()
         .strength(0.5f, 6.0f)
         .sound(SoundType.STONE)
@@ -180,6 +146,18 @@ public class RoadMarkings {
         .isSuffocating((state, level, pos) -> true)
         .isRedstoneConductor((state, level, pos) -> true)
         .isValidSpawn((state, level, pos, type) -> true);
+
+    private static final BlockBehaviour.Properties PROPERTIES_SIGN_POLES = BlockBehaviour.Properties.of()
+        .strength(0.5f, 6.0F)
+        .requiresCorrectToolForDrops()
+        .sound(SoundType.METAL)
+        .isViewBlocking((state, level, pos) -> false)
+        .isSuffocating((state, level, pos) -> false)
+        .isRedstoneConductor((state, level, pos) -> false)
+        .isValidSpawn((state, level, pos, type) -> false);
+
+    public static final DeferredBlock<SignPoleBlock> SIGN_POLE_BLOCK = BLOCKS.registerBlock("sign_pole", SignPoleBlock::new, PROPERTIES_SIGN_POLES);
+    public static final DeferredItem<BlockItem> SIGN_POLE_BLOCK_ITEM = ITEMS.register("sign_pole", () -> new BlockItem(SIGN_POLE_BLOCK.get(), new Item.Properties()));
 
     private static ModBlocks registerBlocks() {
         ModBlocks blocks = new ModBlocks();
@@ -214,23 +192,23 @@ public class RoadMarkings {
 
     public static final ModBlocks MOD_BLOCKS = registerBlocks();
 
-    private static void addToTab(ItemDisplayParameters params, CreativeModeTab.Output output) {
-
-        for(Map.Entry<String, DeferredBlock<Block>> entry : MOD_BLOCKS.paint.entrySet()) {
-            output.accept(entry.getValue());
-        }
-
-        for(Map.Entry<String, DeferredBlock<SmallMarkingBlock>> entry : MOD_BLOCKS.small.entrySet()) {
-            output.accept(entry.getValue());
-        }
-
-        for(Map.Entry<String, DeferredBlock<LargeMarkingBlock>> entry : MOD_BLOCKS.large.entrySet()) {
-            output.accept(entry.getValue());
+    private static <T extends Block> void addCategoryToTab(Map<String, DeferredBlock<T>> pool, String[] patterns, CreativeModeTab.Output output) {
+        for(DyeColor color : DyeColor.values()) {
+            for(String pattern : patterns) {
+                DeferredBlock<T> block = pool.get(pattern + "_" + color.getSerializedName());
+                output.accept(block);
+            }
         }
     }
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("road_markings", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.roadmarkings")) //The language key for the title of your CreativeModeTab
+    private static void addToTab(ItemDisplayParameters params, CreativeModeTab.Output output) {
+        addCategoryToTab(MOD_BLOCKS.paint, new String[] {"asphalt"}, output);
+        addCategoryToTab(MOD_BLOCKS.large, PATTERNS_LARGE, output);
+        addCategoryToTab(MOD_BLOCKS.small, PATTERNS_SMALL, output);
+    }
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MARKINGS_TAB = CREATIVE_MODE_TABS.register("road_markings", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.roadmarkings"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> new ItemStack(MOD_BLOCKS.small.get("double_straight_orange")))
             .displayItems(RoadMarkings::addToTab).build());

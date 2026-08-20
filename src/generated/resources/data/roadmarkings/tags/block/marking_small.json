@@ -1,0 +1,20 @@
+{
+  "values": [
+    "#roadmarkings:marking_small/white",
+    "#roadmarkings:marking_small/orange",
+    "#roadmarkings:marking_small/magenta",
+    "#roadmarkings:marking_small/light_blue",
+    "#roadmarkings:marking_small/yellow",
+    "#roadmarkings:marking_small/lime",
+    "#roadmarkings:marking_small/pink",
+    "#roadmarkings:marking_small/gray",
+    "#roadmarkings:marking_small/light_gray",
+    "#roadmarkings:marking_small/cyan",
+    "#roadmarkings:marking_small/purple",
+    "#roadmarkings:marking_small/blue",
+    "#roadmarkings:marking_small/brown",
+    "#roadmarkings:marking_small/green",
+    "#roadmarkings:marking_small/red",
+    "#roadmarkings:marking_small/black"
+  ]
+}

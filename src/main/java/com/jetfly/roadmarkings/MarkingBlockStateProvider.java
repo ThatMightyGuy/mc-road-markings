@@ -3,6 +3,7 @@ package com.jetfly.roadmarkings;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 
 import java.util.Map;
 
@@ -42,6 +43,69 @@ public class MarkingBlockStateProvider extends BlockStateProvider {
         }
     }
 
+    private void registerSignPoles() {
+        ResourceLocation tex = modLoc("block/asphalt_light_gray");
+
+        BlockModelBuilder core = models().withExistingParent("sign_post_metal_core", modLoc(BLOCK_PATH + "sign_post_core"));
+        core.texture("all", tex);
+        core.texture("particle", tex);
+        BlockModelBuilder nibble = models().withExistingParent("sign_post_metal_nibble", modLoc(BLOCK_PATH + "sign_post_nibble"));
+        nibble.texture("all", tex);
+        nibble.texture("particle", tex);
+        BlockModelBuilder base = models().withExistingParent("sign_post_metal_base", modLoc(BLOCK_PATH + "sign_post_base"));
+        base.texture("all", tex);
+        base.texture("particle", tex);
+
+        SignPoleBlock block = RoadMarkings.SIGN_POLE_BLOCK.get();
+
+        MultiPartBlockStateBuilder multipartBuilder = getMultipartBuilder(block);
+        multipartBuilder
+            .part()
+                .modelFile(core)
+                .addModel()
+            .end()
+            .part()
+                .modelFile(nibble)
+                .rotationX(270)
+                .addModel()
+                .condition(SignPoleBlock.NORTH, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end()
+            .part()
+                .modelFile(nibble)
+                .rotationX(90)
+                .addModel()
+                .condition(SignPoleBlock.SOUTH, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end()
+            .part()
+                .modelFile(nibble)
+                .rotationX(90)
+                .rotationY(270)
+                .addModel()
+                .condition(SignPoleBlock.EAST, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end()
+            .part()
+                .modelFile(nibble)
+                .rotationX(90)
+                .rotationY(90)
+                .addModel()
+                .condition(SignPoleBlock.WEST, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end()
+            .part()
+                .modelFile(nibble)
+                .rotationX(180)
+                .addModel()
+                .condition(SignPoleBlock.UP, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end()
+            .part()
+                .modelFile(nibble)
+                .addModel()
+                .condition(SignPoleBlock.DOWN, BlockConnectionState.CONNECTED, BlockConnectionState.BASED)
+            .end();
+
+
+        // simpleBlock(block, multipartBuilder);
+    }
+
     @Override
     protected void registerStatesAndModels() {
         ModBlocks blocks = RoadMarkings.MOD_BLOCKS;
@@ -60,5 +124,7 @@ public class MarkingBlockStateProvider extends BlockStateProvider {
 
             simpleBlock(kvp.getValue().get(), model);
         }
+
+        registerSignPoles();
     }
 }

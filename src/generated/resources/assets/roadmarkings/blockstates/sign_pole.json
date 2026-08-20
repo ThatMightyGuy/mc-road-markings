@@ -1,0 +1,64 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_core"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble",
+        "x": 270
+      },
+      "when": {
+        "north": "connected|based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble",
+        "x": 90
+      },
+      "when": {
+        "south": "connected|based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble",
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "east": "connected|based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "west": "connected|based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble",
+        "x": 180
+      },
+      "when": {
+        "up": "connected|based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_nibble"
+      },
+      "when": {
+        "down": "connected|based"
+      }
+    }
+  ]
+}

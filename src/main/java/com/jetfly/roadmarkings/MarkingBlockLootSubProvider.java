@@ -6,10 +6,12 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.item.Item;
+import java.util.List;
 
 public class MarkingBlockLootSubProvider extends BlockLootSubProvider {
     private static final Set<Item> EXPLOSION_RESISTANT = Set.of();
@@ -34,9 +36,18 @@ public class MarkingBlockLootSubProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return RoadMarkings.BLOCKS.getEntries()
-            .stream()
-            .map(entry -> (Block) entry.get())
-            .toList();
+        ModBlocks blocks = RoadMarkings.MOD_BLOCKS;
+
+        // return RoadMarkings.BLOCKS.getEntries()
+        //     .stream()
+        //     .map(entry -> (Block) entry.get())
+        //     .toList();
+        return Stream.concat(
+            Stream.concat(
+                blocks.large.values().stream(),
+                blocks.small.values().stream()
+            ).map(x -> (Block) x.get()),
+            blocks.paint.values().stream().map(x -> x.get())
+        ).toList();
     }
 }
