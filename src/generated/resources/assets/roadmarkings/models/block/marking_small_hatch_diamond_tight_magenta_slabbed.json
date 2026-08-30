@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/hatch_diamond_tight_magenta",
+    "particle": "roadmarkings:block/hatch_diamond_tight_magenta"
+  }
+}

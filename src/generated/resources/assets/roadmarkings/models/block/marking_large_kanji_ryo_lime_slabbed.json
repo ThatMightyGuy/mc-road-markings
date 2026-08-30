@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/kanji_ryo_lime",
+    "particle": "roadmarkings:block/kanji_ryo_lime"
+  }
+}

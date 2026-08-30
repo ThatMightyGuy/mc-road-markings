@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/hatch_diamond_regular_blue",
+    "particle": "roadmarkings:block/hatch_diamond_regular_blue"
+  }
+}

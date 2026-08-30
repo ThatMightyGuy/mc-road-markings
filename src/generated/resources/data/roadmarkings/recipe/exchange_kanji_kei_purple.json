@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:marking_large/purple"
+  },
+  "result": {
+    "count": 1,
+    "id": "roadmarkings:kanji_kei_purple"
+  }
+}

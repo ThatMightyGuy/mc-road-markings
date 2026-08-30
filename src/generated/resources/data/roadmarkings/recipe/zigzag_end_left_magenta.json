@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/magenta"
+  },
+  "result": {
+    "count": 16,
+    "id": "roadmarkings:zigzag_end_left_magenta"
+  }
+}

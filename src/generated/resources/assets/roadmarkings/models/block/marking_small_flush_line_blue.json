@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/flush_line_blue",
+    "particle": "roadmarkings:block/flush_line_blue"
+  }
+}

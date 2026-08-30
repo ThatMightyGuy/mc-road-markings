@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -34,9 +35,16 @@ public class MarkingBlockLootSubProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return RoadMarkings.BLOCKS.getEntries()
-            .stream()
-            .map(entry -> (Block) entry.get())
-            .toList();
+        ModBlocks blocks = RoadMarkings.MOD_BLOCKS;
+
+        // This used to return a list of the entire mod blocks registry
+        // That did not work out for me, so I decided to explicitly list everything
+        return Stream.concat(
+            Stream.concat(
+                blocks.large.values().stream(),
+                blocks.small.values().stream()
+            ).map(x -> (Block) x.get()),
+            blocks.paint.values().stream().map(x -> x.get())
+        ).toList();
     }
 }

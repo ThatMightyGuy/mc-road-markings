@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large",
+  "textures": {
+    "all": "roadmarkings:block/kanji_wa_purple",
+    "particle": "roadmarkings:block/kanji_wa_purple"
+  }
+}

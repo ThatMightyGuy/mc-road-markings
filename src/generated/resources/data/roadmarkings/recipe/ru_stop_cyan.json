@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/cyan"
+  },
+  "result": {
+    "count": 8,
+    "id": "roadmarkings:ru_stop_cyan"
+  }
+}

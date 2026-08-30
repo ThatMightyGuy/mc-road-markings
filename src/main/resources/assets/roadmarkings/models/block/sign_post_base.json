@@ -1,0 +1,22 @@
+{
+    "parent": "block/block",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "all": "minecraft:missing",
+        "particle": "minecraft:missing"
+    },
+    "elements": [
+        {
+            "from": [5,  0, 5],
+            "to":   [11, 2,  11],
+            "faces": {
+                "north": {"uv": [0,  0, 4, 2], "texture": "#all"},
+                "south": {"uv": [8,  0, 12, 2], "texture": "#all"},
+                "east":  {"uv": [4,  0, 8, 2], "texture": "#all"},
+                "west":  {"uv": [12,  0, 16, 2], "texture": "#all"},
+                "up":    {"uv": [0,  0, 4, 2], "texture": "#all"},
+                "down":  {"uv": [0,  0, 4, 2], "texture": "#all"}
+            }
+        }
+    ]
+}

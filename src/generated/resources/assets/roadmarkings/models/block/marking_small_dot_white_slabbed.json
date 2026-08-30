@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/dot_white",
+    "particle": "roadmarkings:block/dot_white"
+  }
+}

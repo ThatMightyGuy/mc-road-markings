@@ -9,6 +9,20 @@
     "roadmarkings:through_brown",
     "roadmarkings:through_left_brown",
     "roadmarkings:through_right_brown",
-    "roadmarkings:stop_brown"
+    "roadmarkings:stop_brown",
+    "roadmarkings:ru_stop_brown",
+    "roadmarkings:bus_brown",
+    "roadmarkings:crossing_ahead_brown",
+    "roadmarkings:kana_ni_brown",
+    "roadmarkings:kanji_kei_brown",
+    "roadmarkings:kanji_ryo_brown",
+    "roadmarkings:kanji_sha_brown",
+    "roadmarkings:kanji_wa_brown",
+    "roadmarkings:lane_brown",
+    "roadmarkings:priority_ahead_brown",
+    "roadmarkings:diagonal_brown",
+    "roadmarkings:diagonal_thin_brown",
+    "roadmarkings:roundabout_lhd_brown",
+    "roadmarkings:roundabout_rhd_brown"
   ]
 }

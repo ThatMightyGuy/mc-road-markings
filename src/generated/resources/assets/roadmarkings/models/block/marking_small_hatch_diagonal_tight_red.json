@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/hatch_diagonal_tight_red",
+    "particle": "roadmarkings:block/hatch_diagonal_tight_red"
+  }
+}

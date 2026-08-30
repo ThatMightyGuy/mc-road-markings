@@ -22,6 +22,21 @@
     "roadmarkings:solid_t_magenta",
     "roadmarkings:solid_t_shoulder_magenta",
     "roadmarkings:solid_t_shoulder_left_magenta",
-    "roadmarkings:solid_t_shoulder_right_magenta"
+    "roadmarkings:solid_t_shoulder_right_magenta",
+    "roadmarkings:hatch_diagonal_regular_magenta",
+    "roadmarkings:hatch_diagonal_tight_magenta",
+    "roadmarkings:hatch_diamond_regular_magenta",
+    "roadmarkings:hatch_diamond_tight_magenta",
+    "roadmarkings:dot_magenta",
+    "roadmarkings:jp_no_parking_straight_magenta",
+    "roadmarkings:ped_direction_magenta",
+    "roadmarkings:stop_line_magenta",
+    "roadmarkings:flush_line_magenta",
+    "roadmarkings:flush_line_thin_magenta",
+    "roadmarkings:line_crossing_ahead_zig_magenta",
+    "roadmarkings:line_crossing_ahead_zag_magenta",
+    "roadmarkings:zigzag_end_full_magenta",
+    "roadmarkings:zigzag_end_left_magenta",
+    "roadmarkings:zigzag_end_right_magenta"
   ]
 }

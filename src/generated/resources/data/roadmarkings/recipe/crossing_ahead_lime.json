@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/lime"
+  },
+  "result": {
+    "count": 8,
+    "id": "roadmarkings:crossing_ahead_lime"
+  }
+}

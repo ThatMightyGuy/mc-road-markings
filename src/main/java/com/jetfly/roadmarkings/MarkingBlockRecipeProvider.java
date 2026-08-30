@@ -30,15 +30,13 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
         String result = "";
 
         for (DyeColor color : DyeColor.values()) {
-            Item asphalt = RoadMarkings.MOD_BLOCKS.paint.get("asphalt" + "_" + color).asItem();
-            TagKey<Item> asphaltTag = RoadMarkings.ITEM_TAGS_MARKING_PAINT.get(color);
+            TagKey<Item> asphaltTag = MarkingItemTagsProvider.ITEM_TAGS_MARKING_PAINT.get(color);
             TagKey<Item> itemTag = itemTags.get(color);
 
             for(String target : patterns)
             {
                 // Build pattern recipes from asphalt
                 Item marking = pool.get(target + "_" + color).asItem();
-                RoadMarkings.LOGGER.info("Creating a crafting recipe for {}", target);
 
                 SingleItemRecipeBuilder.stonecutting(
                         Ingredient.of(asphaltTag),
@@ -51,7 +49,6 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
                 ;
 
                 // Build exchange recipes from #marking_size/color
-                RoadMarkings.LOGGER.info("Creating an exchange recipe for {}", target);
                 result = "roadmarkings:exchange_" + target + "_" + color.getSerializedName();
 
                 SingleItemRecipeBuilder.stonecutting( 
@@ -85,9 +82,9 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
             );
         }
 
-        buildMarkingRecipes(consumer, 16, RoadMarkings.PATTERNS_SMALL, RoadMarkings.MOD_BLOCKS.small, RoadMarkings.ITEM_TAGS_MARKING_SMALL);
+        buildMarkingRecipes(consumer, 16, RoadMarkings.PATTERNS_SMALL, RoadMarkings.MOD_BLOCKS.small, MarkingItemTagsProvider.ITEM_TAGS_MARKING_SMALL);
 
-        buildMarkingRecipes(consumer, 8, RoadMarkings.PATTERNS_LARGE, RoadMarkings.MOD_BLOCKS.large, RoadMarkings.ITEM_TAGS_MARKING_LARGE);
+        buildMarkingRecipes(consumer, 8, RoadMarkings.PATTERNS_LARGE, RoadMarkings.MOD_BLOCKS.large, MarkingItemTagsProvider.ITEM_TAGS_MARKING_LARGE);
     }
 
 

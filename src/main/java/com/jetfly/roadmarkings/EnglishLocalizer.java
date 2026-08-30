@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Arrays;
 
 public class EnglishLocalizer {
+    private EnglishLocalizer() {}
     private static Map<String, String> generateHints() {
         Map<String, String> h = new HashMap<>();
 
@@ -27,6 +28,27 @@ public class EnglishLocalizer {
         h.put("pig_path", "Pig Path");
 
         h.put("stop", "Stop Marker");
+        h.put("ru_stop", "Stop Marker (Russia)");
+
+        h.put("bus", "Bus Lane Marker");
+
+        h.put("crossing_ahead", "Pedestrian Crossing Ahead Marker (Japan)");
+
+        h.put("kana_ni", "Katakana Ni");
+        h.put("kanji_kei", "Kanji Kei");
+        h.put("kanji_ryo", "Kanji Ryo");
+        h.put("kanji_sha", "Kanji Sha");
+        h.put("kanji_wa", "Kanji Wa");
+
+        h.put("lane", "Lane Marker");
+
+        h.put("priority_ahead", "Priority Road Ahead Marker (Japan, Russia)");
+
+        h.put("diagonal", "Diagonal");
+        h.put("diagonal_thin", "Thin Diagonal");
+
+        h.put("roundabout_lhd", "Left-Hand Drive Roundabout");
+        h.put("roundabout_rhd", "Right-Hand Drive Roundabout");
 
         h.put("railroad_crossing", "Railroad Crossing");
 
@@ -54,6 +76,27 @@ public class EnglishLocalizer {
         h.put("through", "Straight Arrow");
         h.put("through_left", "Through-Left Arrow");
         h.put("through_right", "Through-Right Arrow");
+
+        h.put("hatch_diagonal_regular", "Regular Diagonal Hatching");
+        h.put("hatch_diagonal_tight", "Tight Diagonal Hatching");
+        h.put("hatch_diamond_regular", "Regular Diamond Hatching");
+        h.put("hatch_diamond_tight", "Tight Diamond Hatching");
+
+        h.put("dot", "Interpunct");
+
+        h.put("jp_no_parking_straight", "No Parking Zone Straight (Japan)");
+
+        h.put("ped_direction", "Pedestrian Direction Arrow");
+
+        h.put("stop_line", "Stop Line");
+        h.put("flush_line", "Flush Line");
+        h.put("flush_line_thin", "Thin Flush Line");
+
+        h.put("line_crossing_ahead_zag", "Left Zigzag (UK)");
+        h.put("line_crossing_ahead_zig", "Right Zigzag (UK)");
+        h.put("zigzag_end_full", "Full Zigzag End (UK)");
+        h.put("zigzag_end_left", "Left Zigzag End (UK)");
+        h.put("zigzag_end_right", "Right Zigzag End (UK)");
 
         return h;
     }

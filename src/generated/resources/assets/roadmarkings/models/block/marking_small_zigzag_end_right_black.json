@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small",
+  "textures": {
+    "all": "roadmarkings:block/zigzag_end_right_black",
+    "particle": "roadmarkings:block/zigzag_end_right_black"
+  }
+}

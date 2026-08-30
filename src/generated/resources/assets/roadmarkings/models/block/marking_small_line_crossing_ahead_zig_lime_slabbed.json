@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_small_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/line_crossing_ahead_zig_lime",
+    "particle": "roadmarkings:block/line_crossing_ahead_zig_lime"
+  }
+}

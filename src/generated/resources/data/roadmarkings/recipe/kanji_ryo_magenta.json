@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "roadmarkings:asphalt/magenta"
+  },
+  "result": {
+    "count": 8,
+    "id": "roadmarkings:kanji_ryo_magenta"
+  }
+}

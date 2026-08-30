@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large_slabbed",
+  "textures": {
+    "all": "roadmarkings:block/ru_stop_cyan",
+    "particle": "roadmarkings:block/ru_stop_cyan"
+  }
+}

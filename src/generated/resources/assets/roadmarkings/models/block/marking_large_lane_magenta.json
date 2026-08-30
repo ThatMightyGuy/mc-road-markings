@@ -1,0 +1,7 @@
+{
+  "parent": "roadmarkings:block/marking_large",
+  "textures": {
+    "all": "roadmarkings:block/lane_magenta",
+    "particle": "roadmarkings:block/lane_magenta"
+  }
+}

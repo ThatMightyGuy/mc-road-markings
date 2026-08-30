@@ -1,0 +1,20 @@
+{
+  "values": [
+    "#roadmarkings:asphalt/white",
+    "#roadmarkings:asphalt/orange",
+    "#roadmarkings:asphalt/magenta",
+    "#roadmarkings:asphalt/light_blue",
+    "#roadmarkings:asphalt/yellow",
+    "#roadmarkings:asphalt/lime",
+    "#roadmarkings:asphalt/pink",
+    "#roadmarkings:asphalt/gray",
+    "#roadmarkings:asphalt/light_gray",
+    "#roadmarkings:asphalt/cyan",
+    "#roadmarkings:asphalt/purple",
+    "#roadmarkings:asphalt/blue",
+    "#roadmarkings:asphalt/brown",
+    "#roadmarkings:asphalt/green",
+    "#roadmarkings:asphalt/red",
+    "#roadmarkings:asphalt/black"
+  ]
+}

@@ -9,6 +9,20 @@
     "roadmarkings:through_light_blue",
     "roadmarkings:through_left_light_blue",
     "roadmarkings:through_right_light_blue",
-    "roadmarkings:stop_light_blue"
+    "roadmarkings:stop_light_blue",
+    "roadmarkings:ru_stop_light_blue",
+    "roadmarkings:bus_light_blue",
+    "roadmarkings:crossing_ahead_light_blue",
+    "roadmarkings:kana_ni_light_blue",
+    "roadmarkings:kanji_kei_light_blue",
+    "roadmarkings:kanji_ryo_light_blue",
+    "roadmarkings:kanji_sha_light_blue",
+    "roadmarkings:kanji_wa_light_blue",
+    "roadmarkings:lane_light_blue",
+    "roadmarkings:priority_ahead_light_blue",
+    "roadmarkings:diagonal_light_blue",
+    "roadmarkings:diagonal_thin_light_blue",
+    "roadmarkings:roundabout_lhd_light_blue",
+    "roadmarkings:roundabout_rhd_light_blue"
   ]
 }

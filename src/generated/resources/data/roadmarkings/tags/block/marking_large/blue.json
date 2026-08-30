@@ -9,6 +9,20 @@
     "roadmarkings:through_blue",
     "roadmarkings:through_left_blue",
     "roadmarkings:through_right_blue",
-    "roadmarkings:stop_blue"
+    "roadmarkings:stop_blue",
+    "roadmarkings:ru_stop_blue",
+    "roadmarkings:bus_blue",
+    "roadmarkings:crossing_ahead_blue",
+    "roadmarkings:kana_ni_blue",
+    "roadmarkings:kanji_kei_blue",
+    "roadmarkings:kanji_ryo_blue",
+    "roadmarkings:kanji_sha_blue",
+    "roadmarkings:kanji_wa_blue",
+    "roadmarkings:lane_blue",
+    "roadmarkings:priority_ahead_blue",
+    "roadmarkings:diagonal_blue",
+    "roadmarkings:diagonal_thin_blue",
+    "roadmarkings:roundabout_lhd_blue",
+    "roadmarkings:roundabout_rhd_blue"
   ]
 }

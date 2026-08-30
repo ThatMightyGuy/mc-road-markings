@@ -9,6 +9,20 @@
     "roadmarkings:through_magenta",
     "roadmarkings:through_left_magenta",
     "roadmarkings:through_right_magenta",
-    "roadmarkings:stop_magenta"
+    "roadmarkings:stop_magenta",
+    "roadmarkings:ru_stop_magenta",
+    "roadmarkings:bus_magenta",
+    "roadmarkings:crossing_ahead_magenta",
+    "roadmarkings:kana_ni_magenta",
+    "roadmarkings:kanji_kei_magenta",
+    "roadmarkings:kanji_ryo_magenta",
+    "roadmarkings:kanji_sha_magenta",
+    "roadmarkings:kanji_wa_magenta",
+    "roadmarkings:lane_magenta",
+    "roadmarkings:priority_ahead_magenta",
+    "roadmarkings:diagonal_magenta",
+    "roadmarkings:diagonal_thin_magenta",
+    "roadmarkings:roundabout_lhd_magenta",
+    "roadmarkings:roundabout_rhd_magenta"
   ]
 }

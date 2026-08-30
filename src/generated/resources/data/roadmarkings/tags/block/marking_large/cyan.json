@@ -9,6 +9,20 @@
     "roadmarkings:through_cyan",
     "roadmarkings:through_left_cyan",
     "roadmarkings:through_right_cyan",
-    "roadmarkings:stop_cyan"
+    "roadmarkings:stop_cyan",
+    "roadmarkings:ru_stop_cyan",
+    "roadmarkings:bus_cyan",
+    "roadmarkings:crossing_ahead_cyan",
+    "roadmarkings:kana_ni_cyan",
+    "roadmarkings:kanji_kei_cyan",
+    "roadmarkings:kanji_ryo_cyan",
+    "roadmarkings:kanji_sha_cyan",
+    "roadmarkings:kanji_wa_cyan",
+    "roadmarkings:lane_cyan",
+    "roadmarkings:priority_ahead_cyan",
+    "roadmarkings:diagonal_cyan",
+    "roadmarkings:diagonal_thin_cyan",
+    "roadmarkings:roundabout_lhd_cyan",
+    "roadmarkings:roundabout_rhd_cyan"
   ]
 }
