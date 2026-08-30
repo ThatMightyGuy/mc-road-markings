@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Arrays;
 
 public class EnglishLocalizer {
+    private EnglishLocalizer() {}
     private static Map<String, String> generateHints() {
         Map<String, String> h = new HashMap<>();
 

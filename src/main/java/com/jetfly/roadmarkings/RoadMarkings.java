@@ -128,6 +128,26 @@ public class RoadMarkings {
         "zigzag_end_right",
     };
 
+    public static final @Nonnull String[] SIGNS_SQUARE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_CIRCLE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_TRIANGLE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_OCTAGON = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_RHOMBUS = {
+
+    };
+
     private static final BlockBehaviour.Properties PROPERTIES_MARKINGS = BlockBehaviour.Properties.of()
         .strength(0.5f, 6.0f)
         .sound(SoundType.STONE)
@@ -146,18 +166,6 @@ public class RoadMarkings {
         .isSuffocating((state, level, pos) -> true)
         .isRedstoneConductor((state, level, pos) -> true)
         .isValidSpawn((state, level, pos, type) -> true);
-
-    private static final BlockBehaviour.Properties PROPERTIES_SIGN_POLES = BlockBehaviour.Properties.of()
-        .strength(0.5f, 6.0F)
-        .requiresCorrectToolForDrops()
-        .sound(SoundType.METAL)
-        .isViewBlocking((state, level, pos) -> false)
-        .isSuffocating((state, level, pos) -> false)
-        .isRedstoneConductor((state, level, pos) -> false)
-        .isValidSpawn((state, level, pos, type) -> false);
-
-    public static final DeferredBlock<SignPoleBlock> SIGN_POLE_BLOCK = BLOCKS.registerBlock("sign_pole", SignPoleBlock::new, PROPERTIES_SIGN_POLES);
-    public static final DeferredItem<BlockItem> SIGN_POLE_BLOCK_ITEM = ITEMS.register("sign_pole", () -> new BlockItem(SIGN_POLE_BLOCK.get(), new Item.Properties()));
 
     private static ModBlocks registerBlocks() {
         ModBlocks blocks = new ModBlocks();
@@ -221,9 +229,7 @@ public class RoadMarkings {
         modEventBus.addListener(this::commonSetup);
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
@@ -231,10 +237,13 @@ public class RoadMarkings {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        NeoForge.EVENT_BUS.register(WrenchInteractionHandler.class);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         modEventBus.addListener(this::gatherData);
+
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
@@ -249,7 +258,7 @@ public class RoadMarkings {
 
         generator.addProvider(
             event.includeClient(),
-            new MarkingBlockStateProvider(output, existingFileHelper)
+            new ModBlockStateProvider(output, existingFileHelper)
         );
 
         generator.addProvider(

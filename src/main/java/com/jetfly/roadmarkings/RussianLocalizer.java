@@ -18,6 +18,7 @@ enum Count {
 }
 
 public class RussianLocalizer {
+    private RussianLocalizer() {}
     private static Map<String, Triplet<Gender, Count, String>> generateHints() {
         Map<String, Triplet<Gender, Count, String>> h = new HashMap<>();
 

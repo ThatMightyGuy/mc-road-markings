@@ -11,7 +11,6 @@ import java.util.stream.Stream;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.item.Item;
-import java.util.List;
 
 public class MarkingBlockLootSubProvider extends BlockLootSubProvider {
     private static final Set<Item> EXPLOSION_RESISTANT = Set.of();
@@ -38,10 +37,8 @@ public class MarkingBlockLootSubProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         ModBlocks blocks = RoadMarkings.MOD_BLOCKS;
 
-        // return RoadMarkings.BLOCKS.getEntries()
-        //     .stream()
-        //     .map(entry -> (Block) entry.get())
-        //     .toList();
+        // This used to return a list of the entire mod blocks registry
+        // That did not work out for me, so I decided to explicitly list everything
         return Stream.concat(
             Stream.concat(
                 blocks.large.values().stream(),

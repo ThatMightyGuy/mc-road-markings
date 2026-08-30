@@ -19,9 +19,6 @@ import net.minecraft.data.tags.TagsProvider;
 import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 
-
-
-
 public class MarkingItemTagsProvider extends ItemTagsProvider {
     public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_LARGE = generateItemTags(MarkingBlockTagsProvider.TAGS_MARKING_LARGE);
     public static final Map<DyeColor, TagKey<Item>> ITEM_TAGS_MARKING_SMALL = generateItemTags(MarkingBlockTagsProvider.TAGS_MARKING_SMALL);
