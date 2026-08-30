@@ -38,7 +38,7 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
             {
                 // Build pattern recipes from asphalt
                 Item marking = pool.get(target + "_" + color).asItem();
-                RoadMarkings.LOGGER.info("Creating a crafting recipe for {}", target);
+                // RoadMarkings.LOGGER.info("Creating a crafting recipe for {}", target);
 
                 SingleItemRecipeBuilder.stonecutting(
                         Ingredient.of(asphaltTag),
@@ -51,7 +51,7 @@ public class MarkingBlockRecipeProvider extends RecipeProvider {
                 ;
 
                 // Build exchange recipes from #marking_size/color
-                RoadMarkings.LOGGER.info("Creating an exchange recipe for {}", target);
+                // RoadMarkings.LOGGER.info("Creating an exchange recipe for {}", target);
                 result = "roadmarkings:exchange_" + target + "_" + color.getSerializedName();
 
                 SingleItemRecipeBuilder.stonecutting( 

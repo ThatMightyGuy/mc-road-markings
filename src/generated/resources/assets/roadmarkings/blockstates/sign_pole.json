@@ -59,6 +59,61 @@
       "when": {
         "down": "connected|based"
       }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base",
+        "x": 270
+      },
+      "when": {
+        "north": "based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base",
+        "x": 90
+      },
+      "when": {
+        "south": "based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base",
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "east": "based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "west": "based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base",
+        "x": 180
+      },
+      "when": {
+        "up": "based"
+      }
+    },
+    {
+      "apply": {
+        "model": "roadmarkings:block/sign_post_metal_base"
+      },
+      "when": {
+        "down": "based"
+      }
     }
   ]
 }

@@ -5,21 +5,25 @@ import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.material.FluidState;
-import net.neoforged.neoforge.common.Tags;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.Level;
 import javax.annotation.Nonnull;
 
 import com.mojang.serialization.MapCodec;
 
+@ModBlock
 public class BasePoleBlock extends Block implements SimpleWaterloggedBlock {
     public static final EnumProperty<BlockConnectionState> NORTH = EnumProperty.create("north", BlockConnectionState.class);
     public static final EnumProperty<BlockConnectionState> SOUTH = EnumProperty.create("south", BlockConnectionState.class);
@@ -112,26 +116,6 @@ public class BasePoleBlock extends Block implements SimpleWaterloggedBlock {
             .setValue(WATERLOGGED, !level.getFluidState(pos).isEmpty());
 	}
 
-    // @Override
-    // public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighbor, BlockPos neighborPos, boolean movedByPiston)
-    // {
-    //     // state.setValue(NORTH, getConnectionState(level, pos, Direction.NORTH))
-    //     //      .setValue(SOUTH, getConnectionState(level, pos, Direction.SOUTH))
-    //     //      .setValue(EAST,  getConnectionState(level, pos, Direction.EAST))
-    //     //      .setValue(WEST,  getConnectionState(level, pos, Direction.WEST))
-    //     //      .setValue(UP,    getConnectionState(level, pos, Direction.UP))
-    //     //      .setValue(DOWN,  getConnectionState(level, pos, Direction.DOWN))
-    //     //      .setValue(WATERLOGGED, !level.getFluidState(pos).isEmpty());
-        
-    //     Vec3i delta = neighborPos.subtract(pos);
-    //     Direction neighborFacing = Direction.fromDelta(delta.getX(), delta.getY(), delta.getZ());
-
-    //     RoadMarkings.LOGGER.info("Neighbor update triggered: current pos: {}, neighbor: {}", pos, neighborPos);
-
-    //     state.setValue(getConnectionProperty(neighborFacing.getOpposite()), getConnectionState(level, pos, neighborFacing));
-
-    // }
-
     @Override
     public BlockState updateShape(
         @Nonnull BlockState state,
@@ -141,10 +125,59 @@ public class BasePoleBlock extends Block implements SimpleWaterloggedBlock {
         @Nonnull BlockPos currentPos,
         @Nonnull BlockPos facingPos
     ) {
-        RoadMarkings.LOGGER.info("Shape update triggered {} from pos: {}", facing, currentPos);
+        // Disconnected faces should stay disconnected
+        if(getConnection(state, facing) == BlockConnectionState.DISCONNECTED)
+            return state;
         BlockConnectionState connection = getConnectionState(level, currentPos, facing);
-        RoadMarkings.LOGGER.info("New connection state is {}", connection);
-        state.setValue(getConnectionProperty(facing), connection);
-        return state;
+        return state.setValue(getConnectionProperty(facing), connection);
+    }
+
+    protected static Direction getHitDirection(BlockPos pos, BlockHitResult hit) {
+        Vec3 localPos = hit.getLocation().subtract(Vec3.atCenterOf(pos));
+        return Direction.getNearest(localPos);
+    }
+
+    protected static BlockConnectionState toggleConnection(BlockState state, LevelAccessor level, BlockPos pos, Direction dir) {
+        BlockConnectionState connection = state.getValue(getConnectionProperty(dir));
+        if(connection == BlockConnectionState.CONNECTED || connection == BlockConnectionState.BASED) {
+            return BlockConnectionState.DISCONNECTED;
+        }
+        Direction opposite = dir.getOpposite();
+        BlockPos neighborPos = pos.relative(dir);
+        BlockState neighbor = level.getBlockState(neighborPos);
+
+        // I *really* do not like that this method modifies the world,
+        // but this was the cleanest solution I can think of
+        if(neighbor.getBlock() instanceof BasePoleBlock) {
+            if(neighbor.getValue(getConnectionProperty(opposite)) == BlockConnectionState.DISCONNECTED)
+            {
+                level.setBlock(neighborPos, neighbor.setValue(getConnectionProperty(opposite), BlockConnectionState.CONNECTED), 2);
+                return BlockConnectionState.CONNECTED;
+            }
+        }
+        return getConnectionState(level, pos, dir);
+    }
+
+    @Override
+    public ItemInteractionResult useItemOn(
+        @Nonnull ItemStack stack,
+        @Nonnull BlockState state,
+        @Nonnull Level level,
+        @Nonnull BlockPos pos,
+        @Nonnull Player player,
+        @Nonnull InteractionHand hand,
+        @Nonnull BlockHitResult hitResult
+    ) {
+        if(WrenchInteractionHandler.isWrench(stack)) {
+            if(!level.isClientSide) {
+                Direction hitDirection = getHitDirection(pos, hitResult);
+                BlockConnectionState newState = toggleConnection(state, level, pos, hitDirection);
+                RoadMarkings.LOGGER.info("Toggling direction {}, new state is {}", hitDirection, newState);
+                level.setBlock(pos, state.setValue(getConnectionProperty(hitDirection), newState), 3);
+            }
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 }

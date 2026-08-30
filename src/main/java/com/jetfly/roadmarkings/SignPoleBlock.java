@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 
 public class SignPoleBlock extends BasePoleBlock {
     protected static final VoxelShape SHAPE_CORE  = Block.box(6, 6, 6, 10, 10, 10);
+
     protected static final VoxelShape SHAPE_NORTH = Block.box(6, 6, 0, 10, 10, 6);
     protected static final VoxelShape SHAPE_SOUTH = Block.box(6, 6, 10, 10, 10, 16);
     protected static final VoxelShape SHAPE_EAST  = Block.box(10, 6, 6, 16, 10, 10);
