@@ -128,6 +128,26 @@ public class RoadMarkings {
         "zigzag_end_right",
     };
 
+    public static final @Nonnull String[] SIGNS_SQUARE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_CIRCLE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_TRIANGLE = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_OCTAGON = {
+
+    };
+
+    public static final @Nonnull String[] SIGNS_RHOMBUS = {
+
+    };
+
     private static final BlockBehaviour.Properties PROPERTIES_MARKINGS = BlockBehaviour.Properties.of()
         .strength(0.5f, 6.0f)
         .sound(SoundType.STONE)
@@ -156,8 +176,12 @@ public class RoadMarkings {
         .isRedstoneConductor((state, level, pos) -> false)
         .isValidSpawn((state, level, pos, type) -> false);
 
-    public static final DeferredBlock<SignPoleBlock> SIGN_POLE_BLOCK = BLOCKS.registerBlock("sign_pole", SignPoleBlock::new, PROPERTIES_SIGN_POLES);
+    public static final DeferredBlock<SignPoleBlock> SIGN_POLE_BLOCK = BLOCKS.registerBlock("sign_pole", SignPoleBlock::new, PROPERTIES_SIGN_POLES);    
     public static final DeferredItem<BlockItem> SIGN_POLE_BLOCK_ITEM = ITEMS.register("sign_pole", () -> new BlockItem(SIGN_POLE_BLOCK.get(), new Item.Properties()));
+
+    public static final DeferredBlock<SignBlock> SIGN_BLOCK = BLOCKS.registerBlock("sign", SignBlock::new, PROPERTIES_SIGN_POLES);
+    public static final DeferredItem<BlockItem> SIGN_BLOCK_ITEM = ITEMS.register("sign", () -> new BlockItem(SIGN_BLOCK.get(), new Item.Properties()));
+    
 
     private static ModBlocks registerBlocks() {
         ModBlocks blocks = new ModBlocks();
@@ -231,10 +255,13 @@ public class RoadMarkings {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        NeoForge.EVENT_BUS.register(WrenchInteractionHandler.class);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         modEventBus.addListener(this::gatherData);
+
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
@@ -249,7 +276,7 @@ public class RoadMarkings {
 
         generator.addProvider(
             event.includeClient(),
-            new MarkingBlockStateProvider(output, existingFileHelper)
+            new ModBlockStateProvider(output, existingFileHelper)
         );
 
         generator.addProvider(
